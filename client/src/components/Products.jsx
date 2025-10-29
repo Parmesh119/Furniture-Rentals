@@ -10,7 +10,8 @@ export default function ProductThree() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const getAllProducts = async () => {
+  const getAllProducts = async (e) => {
+    e.preventDefault();
     try {
       const allProducts = await axios.get(
          `${BASE_URL}/api/products`
