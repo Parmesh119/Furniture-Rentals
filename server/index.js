@@ -16,8 +16,6 @@ connectToDB();
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
-      "https://furniture-rentals.vercel.app",
       "https://furniture-rentals.vercel.app/"
     ],
     methods: ["POST", "GET", "DELETE"],
