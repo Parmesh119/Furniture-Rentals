@@ -15,7 +15,7 @@ connectToDB();
 
 app.use(
   cors({
-    origin: true,
+    origin: "*",
     methods: ["POST", "GET", "DELETE"],
     credentials: true,
   })
