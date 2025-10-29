@@ -22,7 +22,6 @@ import Loader from "./components/Loader.jsx";
 import Forgot_Password from "./components/Forgot_Password.jsx";
 import New_Password from "./components/New_Password.jsx";
 import EditProfileForm from "./components/EditProfileForm.jsx";
-import New_Password from './components/New_Password.jsx'
 import CreateProduct from "./components/Admin/CreateProduct.jsx";
 
 function App() {
@@ -30,12 +29,8 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      console.log("In loader");
       setLoader(true);
     }, 1000);
-  }, []);
-      setLoader(true)
-    }, 1000)
   }, [])
 
   return (
