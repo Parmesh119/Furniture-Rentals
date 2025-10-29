@@ -15,14 +15,13 @@ connectToDB();
 
 app.use(
   cors({
-    origin: [
-      "https://furniture-rentals.vercel.app/"
-    ],
+    origin: true,
     methods: ["POST", "GET", "DELETE"],
     credentials: true,
   })
 );
 app.use(express.json());
+app.options('*', cors());
 
 app.get("/", (req, res) => {
   res.send("Furniture Renting API");
@@ -40,3 +39,4 @@ app.get("/api/getkey", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+module.exports = app;
