@@ -15,7 +15,7 @@ export default function ProductThree() {
       const allProducts = await axios.get(
          `${BASE_URL}/api/products`
       );
-      console.log(allProducts.data);
+      console.log(allProducts);
       setProducts(allProducts.data);
       setLoading(false)
     } catch (error) {

@@ -9,6 +9,7 @@ import {
 } from "@nextui-org/dropdown";
 import { Button } from "@nextui-org/button";
 import { toast } from "react-toastify";
+import logo from "../../public/Images/logo.png";
 
 const menuItems = [
   {
@@ -43,14 +44,14 @@ const menuItems = [
   },
   {
     href: "/recover-password/new-password",
-  }
+  },
 ];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [login, setLogin] = useState(false);
   const [adminLogin, setAdminLogin] = useState(false);
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("");
 
   const navigate = useNavigate();
 
@@ -99,6 +100,12 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <span>
+            <img
+              src={logo}
+              alt="logo.png"
+              className="bg-slate-300 rounded-full"
+            />
+
             {/* <svg
               width="30"
               height="30"
@@ -141,7 +148,7 @@ export default function Navbar() {
               onChange={(e) => setSearch(e.target.value)}
             ></input>
           </div>
-          
+
           {/* // DropdownMenu */}
           <div>
             <Dropdown placement="bottom-center" className=" ">
